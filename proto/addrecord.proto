@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package addrecord;
+
+option go_package = "github.com/brotherlogic/addrecord/proto";
+
+message Config {
+    repeated Tracker trackers = 1;
+}
+
+message Tracker {
+    int32 issue_id = 1;
+    string photo_id = 2;
+
+    string folder = 3;
+    int32 cost = 4;
+    int64 id = 5;
+    string location = 6;
+}
